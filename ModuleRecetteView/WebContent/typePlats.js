@@ -34,5 +34,53 @@ var typePlats = [
 	{
 		"id" : 8,
 		"label" : "Poisson / Fruits de mer"
+	},
+	{
+		"id" : 9,
+		"label" : "Tartes / Quiches"
+	},
+	{
+		"id" : 10,
+		"label" : "Boeuf / Porc"
+	},
+	{
+		"id" : 11,
+		"label" : "Volaille / Gibier"
+	},
+	{
+		"id" : 12,
+		"label" : "Crème / Flanc / Glace"
+	},
+	{
+		"id" : 13,
+		"label" : "Fruits"
+	},
+	{
+		"id" : 14,
+		"label" : "Gâteau / Tarte"
+	},
+	{
+		"id" : 15,
+		"label" : "Biscuit"
+	},
+	{
+		"id" : 16,
+		"label" : "Boisson froide"
+	},
+	{
+		"id" : 17,
+		"label" : "Confiture"
+	},
+	{
+		"id" : 18,
+		"label" : "Pain"
+	},
+	{
+		"id" : 19,
+		"label" : "Recette de base / Pâte"
+	},
+	{
+		"id" : 20,
+		"label" : "Sauce"
 	}
 ];
