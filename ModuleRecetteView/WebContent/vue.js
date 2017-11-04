@@ -27,8 +27,8 @@ var initVue = function(){
 	
 	for(var typePlat of typePlats){
 		var li = $("<li>").addClass("nav-link");
-		li.attr("id",typePlat.label);
-		li.html("<a>"+typePlat.label+"</a>");
+		li.attr("id",typePlat.ancre);
+		li.html("<a href=#ancre"+typePlat.ancre+">"+typePlat.label+"</a>");
 		ul.append(li);
 	}
 	
@@ -73,7 +73,7 @@ var refreshTable = function(){
 		var td = $("<td>").html("<label>"+typePlat.label+"</label>");
 		td.attr("colspan",(champsRecette.length-1));
 		tr.append(td);
-		tr.attr("id","ancre"+typePlat.label)
+		tr.attr("id","ancre"+typePlat.ancre)
 		tbody.append(tr);
 		
 		for(var recette of recettes){
