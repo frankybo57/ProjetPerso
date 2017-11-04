@@ -53,7 +53,7 @@ var initVue = function(){
 	thead.append(tr);
 	
 	for(var champRecette of champsRecette){
-		if(champRecette.id > 3){
+		if(champRecette.id > 7){
 			var td = $("<td>").html("<label>"+champRecette.nom+"</label>");
 			tr.append(td);
 		}
