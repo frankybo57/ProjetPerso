@@ -106,15 +106,14 @@ var refreshTable = function(){
 				
 				// Création des boutons d'impression, d'édition et de suppression
 				var td = $("<td>");
-				td.html("<div class='btn-group'><button type='button' class='btn btn-info btn-sm' onclick='editRecette("+recette.id+")'><span class='glyphicon glyphicon-print'><button type='button' class='btn btn-info btn-sm' onclick='editRecette("+recette.id+")'><span class='glyphicon glyphicon-pencil'></span></button><button type='button' class='btn btn-danger btn-sm' onclick='deleteRecette("
+				td.html("<div class='btn-group'><button type='button' class='btn btn-info btn-sm' onclick='editRecette("+recette.id+")'><span class='glyphicon glyphicon-print'><button type='button' class='btn btn-info btn-sm' onclick='editRecette("+recette.id+")'><span class='glyphicon glyphicon-pencil'></span></button><button type='button' class='btn btn-danger btn-sm' onclick='removeRecetteById("
 				+ recette.id
 				+ ")'><span class='glyphicon glyphicon-trash'></span></button></div>");
 				tr.append(td);
 			}
 		}
 	}
-}
-
+};
 
 
 
