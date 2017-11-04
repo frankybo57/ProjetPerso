@@ -50,56 +50,66 @@ var typePlats = [
 	},
 	{
 		"id" : 10,
-		"label" : "Boeuf / Porc",
-		"ancre" : "boeuf_porc"
+		"label" : "Boeuf",
+		"ancre" : "boeuf"
 	},
 	{
 		"id" : 11,
-		"label" : "Volaille / Gibier",
-		"ancre" : "volaille_gibier"
+		"label" : "Porc",
+		"ancre" : "porc"
 	},
 	{
 		"id" : 12,
+		"label" : "Volaille",
+		"ancre" : "volaille"
+	},
+	{
+		"id" : 13,
+		"label" : "Gibier",
+		"ancre" : "gibier"
+	},
+	{
+		"id" : 14,
 		"label" : "Crème / Flanc / Glace",
 		"ancre" : "creme_flanc_glace"
 	},
 	{
-		"id" : 13,
+		"id" : 15,
 		"label" : "Fruits",
 		"ancre" : "fruits"
 	},
 	{
-		"id" : 14,
+		"id" : 16,
 		"label" : "Gâteau / Tarte",
 		"ancre" : "gateau_tarte"
 	},
 	{
-		"id" : 15,
+		"id" : 17,
 		"label" : "Biscuit",
 		"ancre" : "biscuit"
 	},
 	{
-		"id" : 16,
+		"id" : 19,
 		"label" : "Boisson froide",
 		"ancre" : "boisson_froide"
 	},
 	{
-		"id" : 17,
+		"id" : 20,
 		"label" : "Confiture",
 		"ancre" : "confiture"
 	},
 	{
-		"id" : 18,
+		"id" : 21,
 		"label" : "Pain",
 		"ancre" : "pain"
 	},
 	{
-		"id" : 19,
+		"id" : 22,
 		"label" : "Recette de base / Pâte",
 		"ancre" : "recette_de_base_pate"
 	},
 	{
-		"id" : 20,
+		"id" : 23,
 		"label" : "Sauce",
 		"ancre" : "sauce"
 	}
