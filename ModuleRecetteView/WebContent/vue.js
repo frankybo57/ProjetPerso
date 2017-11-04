@@ -7,10 +7,15 @@ var recettes = [
 		"identifiant" : 1,
 		"Label" : "Escargots de bourgogne",
 		"typePlat" : 2,
-		"Difficulté" : 2,
-		"Temps de préparation" : "30 min",
-		"Nombre de couverts" : "NSP",
-		"Coût" : 2
+		"Difficulté" : 1,
+		"Temps de préparation" : "50 min",
+		"Temps de cuisson" : "5 min",
+		"Nombre de couverts" : 6,
+		"Coût" : 3,
+		"Ingrédients" : "",
+		"Instructions" : "",
+		"Conseils" : "",
+		"Image" : ""
 	}
 ]
 
@@ -93,6 +98,11 @@ var refreshTable = function(){
 								var span = $("<span>").addClass("glyphicon glyphicon-apple");
 								td.append(span);
 							}
+						}
+						else if(champRecette.nom == "Temps de préparation"){
+							var label = $("<label>").css("font-weight","normal");
+							label.text(parseInt(recette[champRecette.nom])+parseInt(recette["Temps de cuisson"]));
+							td.append(label);
 						}
 						else{
 							var label = $("<label>").css({"padding-left":"20px","font-weight":"normal"});
