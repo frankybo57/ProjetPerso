@@ -73,7 +73,7 @@ var refreshTable = function(){
 		var td = $("<td>").html("<label>"+typePlat.label+"</label>");
 		td.attr("colspan",(champsRecette.length-1));
 		tr.append(td);
-		tr.attr("id",typePlat.label)
+		tr.attr("id","ancre"+typePlat.label)
 		tbody.append(tr);
 		
 		for(var recette of recettes){
