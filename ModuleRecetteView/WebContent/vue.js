@@ -15,11 +15,13 @@ var recettes = [
 ]
 
 var initVue = function(){
+	// Fonction d'initialisation de la vue principale du module de gestion des recettes
 	container = $("div.container");
 	
 	var div = $("<div>").addClass("col-sm-2");
 	container.append(div);
 	
+	// Création de la barre de navigation interne à gauche
 	var ul = $("<ul>").addClass("nav nav-pills nav-stacked");
 	div.append(ul);
 	
@@ -30,6 +32,7 @@ var initVue = function(){
 		ul.append(li);
 	}
 	
+	// Création de la partie centrale de la page
 	div = $("<div>").addClass("panel panel-default");
 	div.addClass("col-sm-10");
 	container.append(div);
@@ -39,6 +42,7 @@ var initVue = function(){
 	
 	div.append(div2);
 	
+	// Création du tableau qui contiendra la liste des rcettes
 	var table = $("<table>").addClass("table table-striped");
 	table.attr("id","listeRecettes");
 	
