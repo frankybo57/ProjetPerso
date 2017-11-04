@@ -1,0 +1,136 @@
+/**
+ * 
+ */
+
+var recettes = [
+	{
+		"identifiant" : 1,
+		"Label" : "Escargots de bourgogne",
+		"typePlat" : 2,
+		"Difficulté" : 2,
+		"Temps de préparation" : "30 min",
+		"Nombre de couverts" : "NSP",
+		"Coût" : 2
+	}
+]
+
+var initVue = function(){
+	container = $("div.container");
+	
+	var div = $("<div>").addClass("col-sm-2");
+	container.append(div);
+	
+	var ul = $("<ul>").addClass("nav nav-pills nav-stacked");
+	div.append(ul);
+	
+	for(var typePlat of typePlats){
+		var li = $("<li>").addClass("nav-link");
+		li.attr("id",typePlat.label);
+		li.html("<a>"+typePlat.label+"</a>");
+		ul.append(li);
+	}
+	
+	div = $("<div>").addClass("panel panel-default");
+	div.addClass("col-sm-10");
+	container.append(div);
+	
+	var div2 = $("<div>").addClass("panel-heading");
+	div2.text("Liste des recettes");
+	
+	div.append(div2);
+	
+	var table = $("<table>").addClass("table table-striped");
+	table.attr("id","listeRecettes");
+	
+	var thead = $("<thead>");
+	table.append(thead);
+	
+	var tr = $("<tr>");
+	thead.append(tr);
+	
+	for(var champRecette of champsRecette){
+		if(champRecette.id > 3){
+			var td = $("<td>").html("<label>"+champRecette.nom+"</label>");
+			tr.append(td);
+		}
+	}
+	
+	var tbody = $("<tbody>");
+	table.append(tbody);
+	
+	div.append(table);
+};
+
+var refreshTable = function(){
+	var tbody = $("tbody").empty();
+	
+	for(var typePlat of typePlats){
+		var tr = $("<tr>");
+		var td = $("<td>").html("<label>"+typePlat.label+"</label>");
+		td.attr("colspan",(champsRecette.length-1));
+		tr.append(td);
+		tr.attr("id",typePlat.label)
+		tbody.append(tr);
+		
+		for(var recette of recettes){
+			if(recette.typePlat == typePlat.id){
+				var tr = $("<tr>");
+				for(var champRecette of champsRecette){
+					if(champRecette.id > 3){
+						var td = $("<td>");
+						if(champRecette.nom == "Coût"){
+							for(var i=0; i<recette[champRecette.nom];i++){
+								var span = $("<span>").addClass("glyphicon glyphicon-euro");
+								td.append(span);
+							}
+						}
+						else if(champRecette.nom == "Difficulté"){
+							for(var i=0; i<recette[champRecette.nom];i++){
+								var span = $("<span>").addClass("glyphicon glyphicon-apple");
+								td.append(span);
+							}
+						}
+						else{
+							var label = $("<label>").css({"padding-left":"20px","font-weight":"normal"});
+							label.text(recette[champRecette.nom]);
+							td.append(label);
+						}
+						tr.append(td);
+						tbody.append(tr);
+					}
+				}
+				
+				// Création des boutons d'impression, d'édition et de suppression
+				var td = $("<td>");
+				td.html("<div class='btn-group'><button type='button' class='btn btn-info btn-sm' onclick='editRecette("+recette.id+")'><span class='glyphicon glyphicon-print'><button type='button' class='btn btn-info btn-sm' onclick='editRecette("+recette.id+")'><span class='glyphicon glyphicon-pencil'></span></button><button type='button' class='btn btn-danger btn-sm' onclick='deleteRecette("
+				+ recette.id
+				+ ")'><span class='glyphicon glyphicon-trash'></span></button></div>");
+				tr.append(td);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+initVue();
+refreshTable();
