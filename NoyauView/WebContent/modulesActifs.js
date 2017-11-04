@@ -9,26 +9,31 @@ var modulesActifs = [
 	},
 	{
 		"id" : 2,
-		"nom" : "ModuleStock",
+		"nom" : "Admin",
 		"etat" : "Actif"
 	},
 	{
 		"id" : 3,
-		"nom" : "ModuleRecette",
+		"nom" : "ModuleStock",
 		"etat" : "Actif"
 	},
 	{
 		"id" : 4,
+		"nom" : "ModuleRecette",
+		"etat" : "Actif"
+	},
+	{
+		"id" : 5,
 		"nom" : "ModuleCourse",
 		"etat" : "Inactif"
 	},
 	{
-		"id" : 5,
+		"id" : 6,
 		"nom" : "ModuleMenu",
 		"etat" : "Inactif"
 	},
 	{
-		"id" : 6,
+		"id" : 7,
 		"nom" : "ModuleCalculatrice",
 		"etat" : "Actif"
 	}
