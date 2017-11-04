@@ -80,7 +80,7 @@ var refreshTable = function(){
 			if(recette.typePlat == typePlat.id){
 				var tr = $("<tr>");
 				for(var champRecette of champsRecette){
-					if(champRecette.id > 3){
+					if(champRecette.id > 7){
 						var td = $("<td>");
 						if(champRecette.nom == "Coût"){
 							for(var i=0; i<recette[champRecette.nom];i++){

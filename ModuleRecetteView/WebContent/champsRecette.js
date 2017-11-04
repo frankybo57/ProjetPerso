@@ -13,26 +13,42 @@ var champsRecette = [
 	},
 	{
 		"id" : 3,
-		"texte" : ""
+		"nom" : "Ingrédients"
 	},
 	{
 		"id" : 4,
-		"nom" : "Label"
+		"nom" : "Instructions"
 	},
 	{
 		"id" : 5,
-		"nom" : "Difficulté"
+		"nom" : "Temps de cuisson"
 	},
 	{
 		"id" : 6,
-		"nom" : "Temps de préparation"
+		"nom" : "Conseils"
 	},
 	{
 		"id" : 7,
-		"nom" : "Nombre de couverts"
+		"nom" : "Image"
 	},
 	{
 		"id" : 8,
+		"nom" : "Label"
+	},
+	{
+		"id" : 9,
+		"nom" : "Difficulté"
+	},
+	{
+		"id" : 10,
+		"nom" : "Temps de préparation"
+	},
+	{
+		"id" : 11,
+		"nom" : "Nombre de couverts"
+	},
+	{
+		"id" : 12,
 		"nom" : "Coût"
 	}
 ];
