@@ -16,6 +16,20 @@ var recettes = [
 		"Instructions" : "",
 		"Conseils" : "",
 		"Image" : ""
+	},
+	{
+		"identifiant" : 2,
+		"Label" : "Flammiche des corons",
+		"typePlat" : 16,
+		"Difficulté" : 1,
+		"Temps de préparation" : "20 min",
+		"Temps de cuisson" : "35 min",
+		"Nombre de couverts" : 8,
+		"Coût" : 1,
+		"Ingrédients" : "",
+		"Instructions" : "",
+		"Conseils" : "",
+		"Image" : ""
 	}
 ]
 
