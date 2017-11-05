@@ -76,7 +76,20 @@ var effacer = function(){
 	initMotDePasse();
 };
 
+var testLogin = function(){
+	var login = $("#login").value;
+	var password = $("#password").value;
+	
+	if(isUser(login)){
+		if(getUserByLogin(login).password === password)initAdmin();
+		else{initMotDePasse;}
+	}
+	else{initMotDePasse();}
+};
 
+var initAdmin = function(){
+	console.log("initAdmin");
+};
 
 
 
