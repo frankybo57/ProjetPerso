@@ -70,6 +70,7 @@ var initMotDePasse = function(){
 };
 
 var effacer = function(){
+	// Effacement des champs "login" et "password" de l'écran de connexion au mode admin.
 	$("#login").value = "";
 	$("#password").value = "";
 	
