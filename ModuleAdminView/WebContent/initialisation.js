@@ -1,9 +1,9 @@
 /**
  * 
  */
+var container = $("#container");
 
 var initMotDePasse = function(){
-	container = $("#container");
 	container.empty();
 	
 	var div = $("<div>").addClass("panel panel-default");
@@ -88,16 +88,129 @@ var testLogin = function(){
 };
 
 var initAdmin = function(){
-
+	container.empty();
+	
+	var div = $("<div>").addClass("panel panel-default");
+	container.append(div);
+	
+	var div2 = $("<div>").addClass("panel panel-heading");
+	div2.html("<h1>Mode Admin</h1>");
+	div.append(div2);
+	
+	div2 = $("<div>").addClass("panel panel-body");
+	div.append(div2);
+	
+	// Cadrant de gestion des différents utilisateurs
+	var div3 = $("<div>").addClass("col-sm-6");
+	div2.append(div3);
+	
+	var div4 =  $("<div>").addClass("panel panel-heading");
+	div4.html("<h2>Gestion des utilisateurs</h2>");
+	div3.append(div4);
+	
+	div4 = $("<div>").addClass("panel panel-body");
+	div3.append(div4);
+	
+	var table = $("<table>").addClass("table table-striped");
+	table.attr("id","tableUtilisateurs");
+	div4.append(table);
+	
+	initTableUtilisateurs();
+	
+	// Cadrant de gestion des modules
+	div3 = $("<div>").addClass("col-sm-6");
+	div2.append(div3);
+	
+	var div4 =  $("<div>").addClass("panel panel-heading");
+	div4.html("<h2>Gestion des modules</h2>");
+	div3.append(div4);
+	
+	div4 = $("<div>").addClass("panel panel-body");
+	div3.append(div4);
+	
+	var table = $("<table>").addClass("table table-striped");
+	table.attr("id","tableModules");
+	div4.append(table);
+	
+	initTableModules();
 };
 
+var initTableUtilisateurs = function(){
+	var table = $("#tableUtilisateurs");
+	
+	var thead = $("<thead>");
+	table.append(thead);
+	
+	var tr = $("<tr>");
+	thead.append(tr);
+	
+	var td = $("<td>");
+	tr.append(td);
+	td.html("<label>Login</label>");
+	
+	td = $("<td>");
+	tr.append(td);
+	td.html("<label>Password</label>");
+	
+	td = $("<td>");
+	tr.append(td);
+	td.html("<label>Droits</label>");
+	
+	td = $("<td>");
+	tr.append(td);
+	td.html("<label>Opérations</label>");
+	
+	table.append($("<tbody>"));
+};
 
+var initTableModules = function(){
+	var table = $("#tableModules");
+	
+	var thead = $("<thead>");
+	table.append(thead);
+	
+	var tr = $("<tr>");
+	thead.append(tr);
+	
+	var td = $("<td>");
+	tr.append(td);
+	td.html("<label>Module</label>");
+	
+	td = $("<td>");
+	tr.append(td);
+	td.html("<label>Etat</label>");
+	
+	td = $("<td>");
+	tr.append(td);
+	td.html("<label>Opérations</label>");
+	
+	table.append($("<tbody>"));
+};
 
+var refreshTableUtilisateurs = function(){
+	tbody = $("#tableUtilisateurs tbody");
+	tbody.empty();
+	
+	for(var utilisateur of utilisateurs){
+		var tr = $("<tr>");
+		
+		var td = $("<td>");
+		tr.append(td);
+		td.text(utilisateur.login);
+		
+		td = $("<td>");
+		tr.append(td);
+		td.text(utilisateur.password);
+		
+		td = $("<td>");
+		tr.append(td);
+		td.text(utilisateur.droits);
+	}
+};
 
-
-
-
-
+var refreshTableModules = function(){
+	
+};
 
 
 

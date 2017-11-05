@@ -5,9 +5,10 @@ var utilisateurs = [
 	{
 		"id" : 1,
 		"login" : "Verwalter",
-		"password" : "Passwort"
+		"password" : "Passwort",
+		"droits" : "admin"
 	}
-	];
+];
 
 var isUser = function(login){
 	for(var utilisateur of utilisateurs){
