@@ -56,7 +56,7 @@ var initNavigation = function(){
 		
 		var a = $("<a>").addClass("nav-link");
 		a.attr("href","../../ModuleRecetteView/WebContent/recetteView.html");
-		a.text("Gestion du stock");
+		a.text("Gestion des recettes");
 		
 		li.append(a);
 		ul.append(li);
