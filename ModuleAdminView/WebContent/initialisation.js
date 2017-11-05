@@ -62,11 +62,10 @@ var initMotDePasse = function(){
 	form.append(button);
 	
 	// Bouton retour
-	button = $("<button>").addClass("btn btn-warning");
-	button.attr("onclick","retour()");
-	button.attr("type","button");
-	button.html("<span class=\"glyphicon glyphicon-arrow-left\"></span>")
-	form.append(button);
+	var a = $("<a>").addClass("btn btn-warning");
+	a.attr("href","../../NoyauView/WebContent/noyauView.html");
+	a.html("<span class=\"glyphicon glyphicon-arrow-left\"></span>")
+	form.append(a);
 };
 
 var effacer = function(){
