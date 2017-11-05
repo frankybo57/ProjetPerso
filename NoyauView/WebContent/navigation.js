@@ -32,7 +32,7 @@ var initNavigation = function(){
 		var a = $("<a>").addClass("nav-link active");
 		li.append(a);
 		
-		a.attr("href","../../AdminView/WebContent/adminView.html");
+		a.attr("href","../../ModuleAdminView/WebContent/adminView.html");
 		a.text("Admin");
 	}
 	
