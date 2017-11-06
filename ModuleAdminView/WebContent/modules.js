@@ -1,7 +1,7 @@
 /**
  * 
  */
-var modulesActifs = [
+var modules = [
 	{
 		"id" : 1,
 		"nom" : "Noyau",

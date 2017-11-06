@@ -160,7 +160,10 @@ var initTableUtilisateurs = function(){
 	tr.append(td);
 	td.html("<label>Opérations</label>");
 	
-	table.append($("<tbody>"));
+	var tbody = $("<tbody>").attr("id","tableUtilisateurs");
+	table.append(tbody);
+	
+	refreshTableUtilisateurs();
 };
 
 var initTableModules = function(){
@@ -184,11 +187,14 @@ var initTableModules = function(){
 	tr.append(td);
 	td.html("<label>Opérations</label>");
 	
-	table.append($("<tbody>"));
+	var tbody = $("<tbody>").attr("id","tableModules");
+	table.append(tbody);
+	
+	refreshTableModules();
 };
 
 var refreshTableUtilisateurs = function(){
-	tbody = $("#tableUtilisateurs tbody");
+	tbody = $("tbody#tableUtilisateurs");
 	tbody.empty();
 	
 	for(var utilisateur of utilisateurs){
@@ -200,16 +206,35 @@ var refreshTableUtilisateurs = function(){
 		
 		td = $("<td>");
 		tr.append(td);
-		td.text(utilisateur.password);
+		td.text("******");
+		//td.text(utilisateur.password);
 		
 		td = $("<td>");
 		tr.append(td);
 		td.text(utilisateur.droits);
+		
+		tbody.append(tr);
 	}
 };
 
 var refreshTableModules = function(){
+	tbody = $("tbody#tableModules");
+	tbody.empty();
 	
+	for(var module of modules){
+		var tr = $("<tr>");
+		
+		var td = $("<td>");
+		tr.append(td);
+		td.text(module.nom);
+		
+		td = $("<td>");
+		tr.append(td);
+		td.text(module.etat);
+		//td.text(utilisateur.password);
+		
+		tbody.append(tr);
+	}
 };
 
 

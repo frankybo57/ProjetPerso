@@ -4,7 +4,7 @@
 var utilisateurs = [
 	{
 		"id" : 1,
-		"login" : "Verwalter",
+		"login" : "Admin",
 		"password" : "Passwort",
 		"droits" : "admin"
 	}
