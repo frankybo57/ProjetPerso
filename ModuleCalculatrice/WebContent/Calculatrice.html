@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Calculatrice.css">
+<script type="text/javascript" src="Calculatrice.js" defer></script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<title>Calculatrice</title>
+</head>
+<body>
+	<table>
+	<tr>
+		<td colspan="4"><input id="ecran" type="text"/></td>
+	</tr>
+	<tr>
+		<td><button onclick="taper('reset')" id="buttonCE" type="button" class="buttonFonc">CE</button></td>
+		<td><button onclick="taper('retour')" id="buttonRet" type="button" class="buttonFonc">Ret</button></td>
+		<td><button onclick="taper('%')" id="buttonPour" type="button" class="buttonFonc">%</button></td>
+		<td><button onclick="taper('/')" id="buttonAdd" type="button" class="buttonOp">÷</button></td>
+	</tr>
+	
+	<tr>
+		<td><button onclick="taper('7')" id="button7" type="button" value=7>7</button></td>
+		<td><button onclick="taper('8')" id="button8" type="button" value=8>8</button></td>
+		<td><button onclick="taper('9')" id="button9" type="button" value=9>9</button></td>
+		<td><button onclick="taper('*')" id="buttonSous" type="button" class="buttonOp">x</button></td>
+	</tr>
+	<tr>
+		<td><button onclick="taper('4')" id="button4" type="button" value=4>4</button></td>
+		<td><button onclick="taper('5')" id="button5" type="button" value=5>5</button></td>
+		<td><button onClick="taper('6')" id="button6" type="button" value=6>6</button></td>
+		<td><button onclick="taper('-')" id="buttonMult" type="button" class="buttonOp">-</button></td>
+	</tr>
+	<tr>
+		<td><button onclick="taper('1')" id="button1" type="button" value=1>1</button></td>
+		<td><button onclick="taper('2')" id="button2" type="button" value=2>2</button></td>
+		<td><button onclick="taper('3')" id="button3" type="button" value=3>3</button></td>
+		<td><button onclick="taper('+')" id="buttonDiv" type="button" class="buttonOp">+</button></td>
+	</tr>
+	<tr>
+		<td><button onclick="taper('0')" id="button0" type="button" value=0>0</button></td>
+		<td><button onclick="taper('oppose')" id="buttonPlusMoins" type="button">±</button></td>
+		<td><button onclick="taper('.')" id="buttonVir" type="button">,</button></td>
+		<td><button onclick="taper('=')" id="buttonEgal" type="button" class="buttonOp">=</button></td>
+	</tr>
+	</table>
+	
+	<!-- <span class="glyphicon glyphicon-search" aria-hidden="true"></span>  -->
+	
+	
+</body>
+</html>
