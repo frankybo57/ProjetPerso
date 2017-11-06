@@ -42,7 +42,7 @@ var initMotDePasse = function(){
 	div.append(label);
 	
 	input = $("<input>").addClass("form-control");
-	input.attr("type","text");
+	input.attr("type","password");
 	input.attr("id","password");
 	input.css("width","400px");
 	div.append(input);
