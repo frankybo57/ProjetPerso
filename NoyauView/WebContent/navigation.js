@@ -94,7 +94,7 @@ var initNavigation = function(){
 		li.attr("id","calculatriceTab");
 		
 		var a = $("<a>").addClass("nav-link");
-		a.attr("href","../../ModuleCalculatriceView/WebContent/calculatriceView.html");
+		a.attr("onclick","ouvrirCalculatrice()");
 		a.text("Calculatrice");
 		
 		li.append(a);
@@ -102,6 +102,11 @@ var initNavigation = function(){
 	}
 	
 	
+};
+
+var ouvrirCalculatrice = function(){
+	var position = screen.width - 200;
+	window.open("../../ModuleCalculatriceView/WebContent/calculatriceView.html","newwindow","width=200,height=200,left="+position);
 };
 
 initNavigation();
